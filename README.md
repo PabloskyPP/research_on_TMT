@@ -4,7 +4,9 @@ This repository contains the data and resources used in a own reseach on the The
 # structure of the repository:
 research_on_TMT/
 │
+
 └── README.md # Here it is explained the documents and info collected in each repository file.
+
 │
 └── artículo  # Here it is attached the article compilling all the reseach.
 │
