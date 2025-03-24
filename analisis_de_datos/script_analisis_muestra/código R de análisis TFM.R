@@ -1,61 +1,67 @@
-# Õndice------------------------------------------------------------------------------------------------------------------------1
-# Cargar librerÌas necesarias--------------------------------------------------------------------------------------------------43
+# √çndice------------------------------------------------------------------------------------------------------------------------1
+# Cargar librer√≠as necesarias--------------------------------------------------------------------------------------------------43
 # Leer archivos .sav-----------------------------------------------------------------------------------------------------------55
 # Tabla 1: Tarea Stroop--------------------------------------------------------------------------------------------------------61
 #   Descriptivos de la muestra: edad-------------------------------------------------------------------------------------------66
-#   TransformaciÛn de la matriz a un formato largo para TR---------------------------------------------------------------------75
+#   Transformaci√≥n de la matriz a un formato largo para TR---------------------------------------------------------------------75
 #     ANOVA 2 x 2 x 2 para TR--------------------------------------------------------------------------------------------------93
-#   transformaciÛn de la matriz a un formato largo para PrecisiÛn-------------------------------------------------------------102
-#     Descriptivos para PrecisiÛn---------------------------------------------------------------------------------------------120
-#     ANOVA 2 x 2 x 2 para PrecisiÛn------------------------------------------------------------------------------------------130
-# Tabla 2: Tarea de DifusiÛn de im·genes--------------------------------------------------------------------------------------144
-# La VD se considera continua: difusiÛn poca o mucha--------------------------------------------------------------------------156
-#    AÒadir columna con difusiÛn total y difusiÛn en funciÛn de valencia afectiva---------------------------------------------158
-#     Obtener descriptivos de DifusiÛn para cada imagen de la tarea y graficarlos---------------------------------------------176
-#    Pruebas de diferencia de medias entre Grupos para todas las im·genes-----------------------------------------------------220
-#   Empieza el an·lisis de la DifusiÛn de im·genes en general-----------------------------------------------------------------245
-#     Correlaciones Grupo con difusiÛn en general y en funciÛn de la Valencia Afectiva----------------------------------------247
-#     TransformaciÛn Matriz en Formato Largo para VD seg˙n Valencia Afectiva--------------------------------------------------274
-#     Descriptivos y gr·fica de barras difusiÛn seg˙n Grupo y ValAFect--------------------------------------------------------289
-#   An·lisis ANOVA para la DifusiÛn-------------------------------------------------------------------------------------------359
-#   ANOVA 2 (grupo) x 3 (uso habitual de redes sociales) x 3 (valencia afectiva) para la VD DifusiÛn--------------------------365
+#   transformaci√≥n de la matriz a un formato largo para Precisi√≥n-------------------------------------------------------------102
+#     Descriptivos para Precisi√≥n---------------------------------------------------------------------------------------------120
+#     ANOVA 2 x 2 x 2 para Precisi√≥n------------------------------------------------------------------------------------------130
+# Tabla 2: Tarea de Difusi√≥n de im√°genes--------------------------------------------------------------------------------------144
+# La VD se considera continua: difusi√≥n poca o mucha--------------------------------------------------------------------------156
+#    A√±adir columna con difusi√≥n total y difusi√≥n en funci√≥n de valencia afectiva---------------------------------------------158
+#     Obtener descriptivos de Difusi√≥n para cada imagen de la tarea y graficarlos---------------------------------------------176
+#    Pruebas de diferencia de medias entre Grupos para todas las im√°genes-----------------------------------------------------220
+#   Empieza el an√°lisis de la Difusi√≥n de im√°genes en general-----------------------------------------------------------------245
+#     Correlaciones Grupo con difusi√≥n en general y en funci√≥n de la Valencia Afectiva----------------------------------------247
+#     Transformaci√≥n Matriz en Formato Largo para VD seg√∫n Valencia Afectiva--------------------------------------------------274
+#     Descriptivos y gr√°fica de barras difusi√≥n seg√∫n Grupo y ValAFect--------------------------------------------------------289
+#   An√°lisis ANOVA para la Difusi√≥n-------------------------------------------------------------------------------------------359
+#   ANOVA 2 (grupo) x 3 (uso habitual de redes sociales) x 3 (valencia afectiva) para la VD Difusi√≥n--------------------------365
 #    Pruebas post hoc---------------------------------------------------------------------------------------------------------382
-# H1. La prominencia de mortalidad aumenta la difusiÛn de contenido en SNSs---------------------------------------------------388
-# H2. La prominencia de mortalidad aumenta la difusiÛn de contenido cuando el tiempo de uso diario de SNSs es bajo.-----------392
-# H3. La MS facilita en mayor medida la difusiÛn de contenido positivo, seguido del contenido negativo.-----------------------413
-# La VD se considera discontinua: difusiÛn privada vs p˙blica-----------------------------------------------------------------419
-#   ANOVA 2 (grupo) x 3 (valencia afectiva) x 3(vÌa de difusiÛn)--------------------------------------------------------------481
-# Duda 1. øPor quÈ el ANOVA no calcula la F y significatividad de los tres primeros factores?---------------------------------490
-# H4. La MS aumenta la difusiÛn de contenido negativo en la red privada m·s que en la p˙blica.--------------------------------491
+# H1. La prominencia de mortalidad aumenta la difusi√≥n de contenido en SNSs---------------------------------------------------388
+# H2. La prominencia de mortalidad aumenta la difusi√≥n de contenido cuando el tiempo de uso diario de SNSs es bajo.-----------392
+# H3. La MS facilita en mayor medida la difusi√≥n de contenido positivo, seguido del contenido negativo.-----------------------413
+# La VD se considera discontinua: difusi√≥n privada vs p√∫blica-----------------------------------------------------------------419
+#   ANOVA 2 (grupo) x 3 (valencia afectiva) x 3(v√≠a de difusi√≥n)--------------------------------------------------------------481
+# Duda 1. ¬øPor qu√© el ANOVA no calcula la F y significatividad de los tres primeros factores?---------------------------------490
+# H4. La MS aumenta la difusi√≥n de contenido negativo en la red privada m√°s que en la p√∫blica.--------------------------------491
 # Tabla 3: cuestionario Stroop------------------------------------------------------------------------------------------------529
 # Calcular Alfa de Cronbach --------------------------------------------------------------------------------------------------535
-# An·lisis factorial----------------------------------------------------------------------------------------------------------549
+# An√°lisis factorial----------------------------------------------------------------------------------------------------------549
 #   Correlaciones con la Autoestima-------------------------------------------------------------------------------------------622
-# RegresiÛn Lineal M˙ltiple con mediaciÛn-moderaciÛn--------------------------------------------------------------------------697
+# Regresi√≥n Lineal M√∫ltiple con mediaci√≥n-moderaci√≥n--------------------------------------------------------------------------697
 #   modelo--------------------------------------------------------------------------------------------------------------------702
-# RepeticiÛn de los an·lisis principales pero controlando nueva V "Horario"---------------------------------------------------724
+# Repetici√≥n de los an√°lisis principales pero controlando nueva V "Horario"---------------------------------------------------724
 #   ANOVA Tarea Stroop--------------------------------------------------------------------------------------------------------726
 #     Post hocs---------------------------------------------------------------------------------------------------------------734
-#   ANOVA tarea DifusiÛn------------------------------------------------------------------------------------------------------747
+#   ANOVA tarea Difusi√≥n------------------------------------------------------------------------------------------------------747
 #   ANOVA cuestionario Autoestima---------------------------------------------------------------------------------------------756
 
-
-# Cargar librerÌas necesarias
+# Cargar librer√≠as necesarias
 library(haven) # Para leer archivos .sav
-library(tidyverse) # Para manipulaciÛn de datos
-library(afex) # Para an·lisis ANOVA de medidas repetidas
-library(lavaan) # Para rlm con mediaciÛn-moderaciÛn
-library(lm.beta) # Para regresiÛn lineal
-library(ggplot2) # Para visualizaciÛn
+library(tidyverse) # Para manipulaci√≥n de datos
+library(afex) # Para an√°lisis ANOVA de medidas repetidas
+library(lavaan) # Para rlm con mediaci√≥n-moderaci√≥n
+library(lm.beta) # Para regresi√≥n lineal
+library(ggplot2) # Para visualizaci√≥n
 library(dplyr) # Para manejar tablas mejor
-library(psych) #Para el an·lisis factorial y prueba de fiabilidad  
+library(psych) #Para el an√°lisis factorial y prueba de fiabilidad  
 library(emmeans) #Para pruebas post-hoc
-library(Hmisc) #Para obtener la significatividad de los an·lisis correlacionales
+library(Hmisc) #Para obtener la significatividad de los an√°lisis correlacionales
+library(effectsize) #Para obtener eta2, la varianza explicada por el efecto de una variable en el an√°lisis ANOVA
+library(nnet) # para la regresi√≥n log√≠stica multinomial
+library(pscl) #calcular el pseudo-R¬≤ de McFadden, que mide la proporci√≥n de mejora con el modelo no nulo de reg. log. multinomial
+library(tidyr)
+library(stringr)
 
 # Leer archivos .sav
 tabla1 <- read_sav("DatosTareaStroop.sav")
 tabla2 <- read_sav("DatosTareaImagenes.sav")
 tabla3 <- read_sav("DatosCuestionarioAutoestima.sav")
+tabla_IAPS <- read_sav("imagenes IAPS experimento.sav")
+tabla2_TR <- read_sav("DatosTareaImagenes_TR.sav")
 
 
 # ---------------- Tabla 1: Tarea Stroop ---------------- #
@@ -65,7 +71,7 @@ descriptivos_edad_muestra <- tabla1 %>%
   summarise(
     Frecuencia = n(), 
     Media = mean(Edad, na.rm = TRUE), 
-    DesviaciÛn_TÌpica = sd(Edad, na.rm = TRUE)
+    Desviaci√≥n_T√≠pica = sd(Edad, na.rm = TRUE)
   )
 print(descriptivos_edad_muestra)
 
@@ -78,7 +84,7 @@ tabla1_larga_TR <- tabla1 %>%
   ) %>%
   mutate(
     TipoPalabra = case_when(
-      str_detect(Condicion, "Stn") ~ "Est·ndar",
+      str_detect(Condicion, "Stn") ~ "Est√°ndar",
       str_detect(Condicion, "Obj") ~ "Objetivo"
     ),
     Color = case_when(
@@ -96,16 +102,16 @@ anova_stroopTR <- aov_car(
 # Mostrar los resultados
 summary(anova_stroopTR)
 
-# ANOVA 2 (grupo) x 2 (tipo de palabra) x 2 (color) para la PrecisiÛn de Respuesta
-tabla1_larga_PrecisiÛn <- tabla1 %>%
+# ANOVA 2 (grupo) x 2 (tipo de palabra) x 2 (color) para la Precisi√≥n de Respuesta
+tabla1_larga_Precisi√≥n <- tabla1 %>%
   pivot_longer(
     cols = c(StnBluAE, StnRedAE, ObjBluAE, ObjRedAE),
     names_to = "Condicion",
-    values_to = "PrecisiÛn"
+    values_to = "Precisi√≥n"
   ) %>%
   mutate(
     TipoPalabra = case_when(
-      str_detect(Condicion, "Stn") ~ "Est·ndar",
+      str_detect(Condicion, "Stn") ~ "Est√°ndar",
       str_detect(Condicion, "Obj") ~ "Objetivo"
     ),
     Color = case_when(
@@ -114,31 +120,42 @@ tabla1_larga_PrecisiÛn <- tabla1 %>%
     )
   )
 
-# Descriptivos para PrecisiÛn
-descriptivos_Stroop_PrecisiÛn <- tabla1_larga_PrecisiÛn%>%
-  group_by(Grupo, TipoPalabra) %>% # Agrupar por niveles de Grupo y Tipo_de_palabra
+# Descriptivos para Precisi√≥n
+descriptivos_Stroop_Precisi√≥n <- tabla1_larga_Precisi√≥n%>%
+  group_by(Grupo, TipoPalabra, Color) %>% # Agrupar por niveles de Grupo y Tipo_de_palabra
   summarise(
     Frecuencia = n(), 
-    Media = mean(PrecisiÛn, na.rm = TRUE), 
-    DesviaciÛn_TÌpica = sd(PrecisiÛn, na.rm = TRUE)
+    Media = mean(Precisi√≥n, na.rm = TRUE), 
+    Desviaci√≥n_T√≠pica = sd(Precisi√≥n, na.rm = TRUE)
   )
-print(descriptivos_Stroop_PrecisiÛn)
+print(descriptivos_Stroop_Precisi√≥n)
 
-# ANOVA para PrecisiÛn
+#Descriptivos para el TR
+descriptivos_Stroop_TR <- tabla1_larga_TR%>%
+  group_by(Grupo, TipoPalabra, Color) %>% # Agrupar por niveles de Grupo y Tipo_de_palabra
+  summarise(
+    Frecuencia = n(), 
+    Media = mean(TR, na.rm = TRUE), 
+    Desviaci√≥n_T√≠pica = sd(TR, na.rm = TRUE)
+  )
+print(descriptivos_Stroop_TR)
+
+# ANOVA para Precisi√≥n
 anova_stroopAE <- aov_car(
-  PrecisiÛn ~ Grupo * Color * TipoPalabra + Error(Subject / (Color * TipoPalabra)),
-  data = tabla1_larga_PrecisiÛn
+  Precisi√≥n ~ Grupo * Color * TipoPalabra + Error(Subject / (Color * TipoPalabra)),
+  data = tabla1_larga_Precisi√≥n
 )
 
 # Mostrar los resultados
 summary(anova_stroopAE)
+eta_squared(anova_stroopAE, partial = TRUE) # Muestra tambi√©n la variabilidad explicada eta2 o ??p2.
 
 #Prueba posthoc para las interacciones que resultasen significativas
 posthoc<- emmeans(anova_stroopAE, pairwise ~ Grupo:Color)
 print(posthoc)
 
 
-# ---------------- Tabla 2: Tarea de DifusiÛn de im·genes ---------------- #
+# ---------------- Tabla 2: Tarea de Difusi√≥n de im√°genes ---------------- #
 
 # Crear columna PercentilUsoSNS
 tabla2 <- tabla2 %>%
@@ -149,30 +166,37 @@ tabla2 <- tabla2 %>%
       TRUE ~ 3
     )
   )
+# Obtener el n√∫mero de casos de cada percentil
+Percentil1 = sum(all_of(tabla2$PercentilUsoSNS) == 1, na.rm = TRUE)
+print(Percentil1)
+Percentil2 = sum(all_of(tabla2$PercentilUsoSNS) == 2, na.rm = TRUE)
+print(Percentil2)
+Percentil3 = sum(all_of(tabla2$PercentilUsoSNS) == 3, na.rm = TRUE)
+print(Percentil3)
 
-#La VD se considera continua: difusiÛn poca o mucha
+#La VD se considera continua: difusi√≥n poca o mucha
 
-#AÒadir columna con difusiÛn total general
+#A√±adir columna con difusi√≥n total general
 columnas_imagenes <- paste0("@", c("1710", "1920", "2057", "2550", "5470", "5621", "5760", 
                                    "5830", "7502", "8080", "2095", "2683", "2688", "6243", 
                                    "7380", "9340", "9432", "9520", "9621", "9630", "2397", 
                                    "2570", "2702", "2850", "2880", "5740", "5920", "7037", 
                                    "7590", "8232"), ".jpg") 
 
-# Discriminar las columnas de imagenes seg˙n su Val.Afect.
+# Discriminar las columnas de imagenes seg√∫n su Val.Afect.
 columnas_imagen_positiva <- paste0("@", c("1710", "1920", "2057", "2550", "5470", "5621", "5760", "5830", "7502", "8080"),".jpg")
 columnas_imagen_negativa <- paste0("@", c("2095","2683","2688","6243","7380","9340","9432", "9520", "9621", "9630"),".jpg")
 columnas_imagen_neutral <- paste0("@", c("2397", "2570", "2702", "2850", "2880", "5740", "5920", "7037", "7590", "8232"),".jpg")
 
-#AÒade columnas con la difusiÛn total general para cada categorÌa de im·genes seg˙n valencia afectiva
-tabla2$DifusiÛnTotal <- rowSums(tabla2[, columnas_imagenes], na.rm = TRUE)
-tabla2$DifusiÛntotalImagenesNegativas <- rowSums(tabla2[, columnas_imagen_negativa], na.rm = TRUE)
-tabla2$DifusiÛntotalImagenesNeutrales <- rowSums(tabla2[, columnas_imagen_neutral], na.rm = TRUE)
-tabla2$DifusiÛntotalImagenesPositivas <- rowSums(tabla2[, columnas_imagen_positiva], na.rm = TRUE)
+#A√±ade columnas con la difusi√≥n total general para cada categor√≠a de im√°genes seg√∫n valencia afectiva
+tabla2$Difusi√≥nTotal <- rowSums(tabla2[, columnas_imagenes], na.rm = TRUE)
+tabla2$Difusi√≥ntotalImagenesNegativas <- rowSums(tabla2[, columnas_imagen_negativa], na.rm = TRUE)
+tabla2$Difusi√≥ntotalImagenesNeutrales <- rowSums(tabla2[, columnas_imagen_neutral], na.rm = TRUE)
+tabla2$Difusi√≥ntotalImagenesPositivas <- rowSums(tabla2[, columnas_imagen_positiva], na.rm = TRUE)
 
-# Obtener descriptivos de DifusiÛn para cada imagen de la tarea.
+# Obtener descriptivos de Difusi√≥n para cada imagen de la tarea.
 resumen <- tabla2 %>%
-  select(all_of(columnas_imagenes)) %>% # Seleccionar solo las columnas de interÈs
+  select(all_of(columnas_imagenes)) %>% # Seleccionar solo las columnas de inter√©s
   summarise(across(everything(), list(
     media = ~mean(.x, na.rm = TRUE),
     desviacion = ~sd(.x, na.rm = TRUE)
@@ -194,25 +218,26 @@ resumen <- tabla2 %>%
 # Verificar el resultado del resumen
 print(resumen)
 
-# Ordenar las im·genes por ValenciaAfectiva
+# Ordenar las im√°genes por ValenciaAfectiva
 resumen <- resumen %>%
   mutate(
     ValenciaAfectiva = factor(ValenciaAfectiva, levels = c("Negativa", "Neutra", "Positiva")),
-    Imagen = reorder(Imagen, as.numeric(ValenciaAfectiva)) # Reordenar las im·genes por valencia afectiva
+    Imagen = reorder(Imagen, as.numeric(ValenciaAfectiva)) # Reordenar las im√°genes por valencia afectiva
   )
 
-# Gr·fica de DifusiÛn de las im·genes
+# Gr√°fica de Difusi√≥n de las im√°genes
 ggplot(resumen, aes(x = Imagen, y = media, fill = ValenciaAfectiva)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(
-    title = "Medias de DifusiÛn por Imagen",
-    x = "Im·genes agrupadas por Valencia Afectiva",
-    y = "Media de DifusiÛn",
+    title = "Medias de Difusi√≥n por Imagen",
+    x = "Im√°genes agrupadas por Valencia Afectiva",
+    y = "Media de Difusi√≥n",
     fill = "Valencia Afectiva"
   ) +
   theme_minimal() +
   scale_x_discrete(guide = guide_axis(angle = 45)) + # Rotar etiquetas del eje x
-  theme(legend.position = "top")
+  theme(legend.position = "top") +
+  scale_y_continuous(breaks = seq(0, max(resumen$media, na.rm = TRUE), by = 0.2)) # Agregar puntos de corte en el eje y cada 0.4
 
 # Pruebas de diferencia de medias entre Grupos para cada imagen
 resultados <- lapply(columnas_imagenes, function(col) {
@@ -236,26 +261,27 @@ resultados_df <- do.call(rbind, resultados)
 resultados_significativos <- resultados_df %>%
   filter(p_value < 0.05)
 
-# Mostrar los resultados significativos
+# Mostrar los resultados
+print(resultados_df)
 print(resultados_significativos)
 
-# Empieza el an·lisis de la DifusiÛn de im·genes en general
+# Empieza el an√°lisis de la Difusi√≥n de im√°genes en general
 
-#Correlaciones para ver si el Grupo se asocia a mayor difusiÛn general y/o en funciÛn de la Valencia Afectiva
+#Correlaciones para ver si el Grupo se asocia a mayor difusi√≥n general y/o en funci√≥n de la Valencia Afectiva
  
-variables_correlaciÛn_tabla2 <- tabla2 %>%
-  select(Grupo, DifusiÛnTotal, DifusiÛntotalImagenesNegativas, DifusiÛntotalImagenesNeutrales, DifusiÛntotalImagenesPositivas)
+variables_correlaci√≥n_tabla2 <- tabla2 %>%
+  select(Grupo, Difusi√≥nTotal, Difusi√≥ntotalImagenesNegativas, Difusi√≥ntotalImagenesNeutrales, Difusi√≥ntotalImagenesPositivas)
 
-cor_spearman_tabla2_VDcomoContinua <- rcorr(as.matrix(variables_correlaciÛn_tabla2), type = "spearman")
+cor_spearman_tabla2_VDcomoContinua <- rcorr(as.matrix(variables_correlaci√≥n_tabla2), type = "spearman")
 
-# Crea funciÛn para etiquetar p-valores con asteriscos
+# Crea funci√≥n para etiquetar p-valores con asteriscos
 asterisks <- function(p) {
   ifelse(p <= 0.001, "***",
          ifelse(p <= 0.01, "**",
                 ifelse(p <= 0.05, "*", "")))
 }
 
-# Aplicar la funciÛn a la matriz actual
+# Aplicar la funci√≥n a la matriz actual
 p_values_with_asterisks <- apply(cor_spearman_tabla2_VDcomoContinua$P, c(1, 2), asterisks)
 
 # Combinar los r-valores con los asteriscos de la significatividad correspondiente
@@ -266,14 +292,14 @@ cor_with_asterisks <- matrix(
   dimnames = dimnames(cor_spearman_tabla2_VDcomoContinua$r)
 )
 # Mostrar la matriz combinada
-print(cor_with_asterisks) #El Grupo no correlaciona con ning˙n tipo de difusiÛn
+print(cor_with_asterisks) #El Grupo no correlaciona con ning√∫n tipo de difusi√≥n
 
-#TransformaciÛn Matriz en Formato Largo para VD seg˙n Valencia Afectiva
+#Transformaci√≥n Matriz en Formato Largo para VD seg√∫n Valencia Afectiva
 tabla2_larga_VDcomoContinua <- tabla2%>%
   pivot_longer(
-    cols = c(DifusiÛntotalImagenesNegativas, DifusiÛntotalImagenesNeutrales, DifusiÛntotalImagenesPositivas),
+    cols = c(Difusi√≥ntotalImagenesNegativas, Difusi√≥ntotalImagenesNeutrales, Difusi√≥ntotalImagenesPositivas),
     names_to = "ValAfect",
-    values_to = "DifusiÛnSeg˙nValenciaAfectivaVDcomoContinua"
+    values_to = "Difusi√≥nSeg√∫nValenciaAfectivaVDcomoContinua"
   ) %>%
   mutate(
     ValAfect = case_when(
@@ -284,17 +310,17 @@ tabla2_larga_VDcomoContinua <- tabla2%>%
   )
 
 #Descriptivos segun ValAFect
-descriptivos_Im·genesVDcomoContinua <- tabla2_larga_VDcomoContinua %>%
+descriptivos_Im√°genesVDcomoContinua <- tabla2_larga_VDcomoContinua %>%
   group_by(ValAfect) %>% # Agrupar por niveles de Grupo y Tipo_de_palabra
   summarise(
     Frecuencia = n(),   
-    Media = mean(DifusiÛnSeg˙nValenciaAfectivaVDcomoContinua, na.rm = TRUE), 
-    DesviaciÛn_TÌpica = sd(DifusiÛnSeg˙nValenciaAfectivaVDcomoContinua, na.rm = TRUE)
+    Media = mean(Difusi√≥nSeg√∫nValenciaAfectivaVDcomoContinua, na.rm = TRUE), 
+    Desviaci√≥n_T√≠pica = sd(Difusi√≥nSeg√∫nValenciaAfectivaVDcomoContinua, na.rm = TRUE)
   )
 # Mostrar el resultado
-print(descriptivos_Im·genesVDcomoContinua)
+print(descriptivos_Im√°genesVDcomoContinua)
 
-#Gr·fica comparando DifusiÛn de los dos grupos seg˙n ValAfect
+#Gr√°fica comparando Difusi√≥n de los dos grupos seg√∫n ValAfect
 
 # Ordenar las variables ValAfect y Grupo
 tabla2_larga_VDcomoContinua <- tabla2_larga_VDcomoContinua %>%
@@ -310,17 +336,18 @@ tabla2_larga_VDcomoContinua <- tabla2_larga_VDcomoContinua %>%
         "Grupo 2 Valencia Afectiva 3"
                 )
           )
+)
+# Crear la gr√°fica de barras
 
-# Crear la gr·fica de barras
-
-# Crear la columna de interacciÛn y calcular la media para cada combinaciÛn
+# Crear la columna de interacci√≥n y calcular la media para cada combinaci√≥n
 resumen <- tabla2_larga_VDcomoContinua %>%
      group_by(Grupo, ValAfect) %>%
-     summarise(Media_DifusiÛn = mean(DifusiÛnSeg˙nValenciaAfectivaVDcomoContinua, na.rm = TRUE)) %>%
+     summarise(Media_Total_Difusi√≥n_CatAfect = mean(Difusi√≥nSeg√∫nValenciaAfectivaVDcomoContinua, na.rm = TRUE)) %>%
      ungroup() %>%
      mutate(
-        # Ajustar la combinaciÛn de texto para que coincida con los niveles
-        InteracciÛn = factor(
+       Media_Difusi√≥n_imagen = Media_Total_Difusi√≥n_CatAfect /10, # Se divide la media de difusi√≥n total de la categor√≠a afectiva / n√∫mero de im√°genes de la categor√≠a
+        # Ajustar la combinaci√≥n de texto para que coincida con los niveles
+        Interacci√≥n = factor(
           case_when(
             ValAfect == "Negativa" & Grupo == 1 ~ "Negativas Grupo 1",
             ValAfect == "Negativa" & Grupo == 2 ~ "Negativas Grupo 2",
@@ -337,120 +364,401 @@ resumen <- tabla2_larga_VDcomoContinua %>%
             "Neutras Grupo 2",
             "Positivas Grupo 1",
             "Positivas Grupo 2"
+                  )
+              )
           )
-        )
-      )
     
-    # Crear la gr·fica de barras
-    ggplot(resumen, aes(x = InteracciÛn, y = Media_DifusiÛn, fill = factor(Grupo))) +
-      geom_bar(stat = "identity", position = "dodge") +
-      labs(
-        title = "Gr·fica de Barras: DifusiÛn seg˙n Grupo y Valencia Afectiva",
-        x = "Grupo y Valencia Afectiva",
-        y = "Media de DifusiÛn",
-        fill = "Grupo"
-      ) +
-      theme_minimal() +
-      theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotar etiquetas en eje x
+    # Crear la gr√°fica de barras
+ggplot(resumen, aes(x = Interacci√≥n, y = Media_Difusi√≥n_imagen, fill = factor(Grupo))) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(
+    title = "Gr√°fica de Barras: Difusi√≥n seg√∫n Grupo y Valencia Afectiva",
+    x = "Grupo y Valencia Afectiva",
+    y = "Media de Difusi√≥n",
+    fill = "Grupo"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + # Rotar etiquetas en eje x
+  scale_y_continuous(breaks = seq(0, max(resumen$Media_Difusi√≥n_imagen, na.rm = TRUE), by = 0.25)) # Agregar puntos de corte en el eje y cada 0.4
 
-# An·lisis ANOVA
+# An√°lisis ANOVA
   
-#Se requiere transformar las variables categÛricas a factores para realizar el ANOVA
+#Se requiere transformar las variables categ√≥ricas a factores para realizar el ANOVA
 tabla2_larga_VDcomoContinua$Grupo <- as.factor(tabla2_larga_VDcomoContinua$Grupo)
 tabla2_larga_VDcomoContinua$PercentilUsoSNS <- as.factor(tabla2_larga_VDcomoContinua$PercentilUsoSNS)
 
-# ANOVA 2 (grupo) x 3 (uso habitual de redes sociales) x 3 (valencia afectiva) para la VD DifusiÛn en general
+# ANOVA 2 (grupo) x 3 (uso habitual de redes sociales) x 3 (valencia afectiva) para la VD Difusi√≥n en general
 anova_imagenes_VDcomoContinua <- aov_car(
-  DifusiÛnSeg˙nValenciaAfectivaVDcomoContinua ~ Grupo * PercentilUsoSNS * ValAfect + Error(Subject / ValAfect),
+  Difusi√≥nSeg√∫nValenciaAfectivaVDcomoContinua ~ Grupo * PercentilUsoSNS * ValAfect + Error(Subject / ValAfect),
   data = tabla2_larga_VDcomoContinua
 )
 summary(anova_imagenes_VDcomoContinua) 
 # Se observa en el Mauchly Tests la significatividad y rechazo del supuesto de no esfericidad, se recurre a Greenhouse-Geisser
 
 anova_imagenes_VDcomoContinua <- aov_car(
-  DifusiÛnSeg˙nValenciaAfectivaVDcomoContinua ~ Grupo * PercentilUsoSNS * ValAfect + Error(Subject / ValAfect),
+  Difusi√≥nSeg√∫nValenciaAfectivaVDcomoContinua ~ Grupo * PercentilUsoSNS * ValAfect + Error(Subject / ValAfect),
   data = tabla2_larga_VDcomoContinua,
   anova_table = list(correction = "GG", es = "ges", full = TRUE) 
 )
-resultados_anova_imagenes_VDcomoContinua_conCorrecciÛnGG<- anova_imagenes_VDcomoContinua$anova_table
-print(resultados_anova_imagenes_VDcomoContinua_conCorrecciÛnGG)
+resultados_anova_imagenes_VDcomoContinua_conCorrecci√≥nGG<- anova_imagenes_VDcomoContinua$anova_table
+print(resultados_anova_imagenes_VDcomoContinua_conCorrecci√≥nGG)
+eta_squared(resultados_anova_imagenes_VDcomoContinua_conCorrecci√≥nGG, partial = TRUE) 
 
 
-# Pruebas post hoc para los nivel de interacciÛn de variables significativos y aquellos demandados por las hipÛtesis. 
+# Pruebas post hoc para los nivel de interacci√≥n de variables significativos y aquellos demandados por las hip√≥tesis. 
 
-# Aunque si ya no saliÛ una interacciÛn significativa en el ANOVA sobrarÌa mirar los post hoc
+# Aunque si ya no sali√≥ una interacci√≥n significativa en el ANOVA sobrar√≠a mirar los post hoc
 posthoc<- emmeans(anova_imagenes_VDcomoContinua, pairwise ~ ValAfect)
-print(posthoc) #Se comprueba en general cu·les im·genes se difunde m·s
+print(posthoc) #Se comprueba en general cu√°les im√°genes se difunde m√°s
 
-# H1. La prominencia de mortalidad aumenta la difusiÛn de contenido en SNSs,
+# H1. La prominencia de mortalidad aumenta la difusi√≥n de contenido en SNSs,
 posthoc<- emmeans(anova_imagenes_VDcomoContinua, pairwise ~ Grupo)
 print(posthoc)  #Rechazo H1
   
-# H2. La prominencia de mortalidad aumenta la difusiÛn de contenido cuando el tiempo de uso diario de SNSs es bajo.
+# H2. La prominencia de mortalidad aumenta la difusi√≥n de contenido cuando el tiempo de uso diario de SNSs es bajo.
 em <- emmeans(anova_imagenes_VDcomoContinua, ~ Grupo | PercentilUsoSNS)
 comparison_val3 <- contrast(em, method = "pairwise", by = "PercentilUsoSNS")
 print(comparison_val3) # Rechazo H2
-# M·s en detalle (tambiÈn seg˙n Valencia Afectiva)
+# M√°s en detalle (tambi√©n seg√∫n Valencia Afectiva)
 em <- emmeans(anova_imagenes_VDcomoContinua, ~  PercentilUsoSNS | Grupo | ValAfect)
 em_subset <- emmeans(em, ~  Grupo | PercentilUsoSNS| ValAfect)
 contrast_result <- contrast(em_subset, method = "pairwise", adjust = "bonferroni")
 print(contrast_result)
-# El uso m·s habitual de redes sociales no influyÛ en la difusiÛn, tampoco en interacciÛn con el Grupo (seg˙n se indica en el ANOVA), sin embargo
-# en el post hoc sÌ que se encuentra una diferencia significativa entre grupos, ˙nicamente para los usuarios con un tiempo de Uso de SNS promedio en la difusiÛn
-# de im·genes negativas y positivas (difundiendo m·s el grupo 1 que 2)
+# El uso m√°s habitual de redes sociales no influy√≥ en la difusi√≥n, tampoco en interacci√≥n con el Grupo (seg√∫n se indica en el ANOVA), sin embargo
+# en el post hoc s√≠ que se encuentra una diferencia significativa entre grupos, √∫nicamente para los usuarios con un tiempo de Uso de SNS promedio en la difusi√≥n
+# de im√°genes negativas y positivas (difundiendo m√°s el grupo 1 que 2)
 
-# QuerÌa aquÌ ver el tamaÒo muestral para tal internivel de variables (sujetos grupo experimental y UsoSNS == 2)
-descriptivos_n_seg˙n_usoSNS <- tabla2_larga_VDcomoContinua %>%
+# Quer√≠a aqu√≠ ver el tama√±o muestral para tal internivel de variables (sujetos grupo experimental y UsoSNS == 2)
+descriptivos_n_seg√∫n_usoSNS <- tabla2_larga_VDcomoContinua %>%
   group_by(PercentilUsoSNS, Grupo, ValAfect) %>% # Ver n de UsoSNS
   summarise(
     Frecuencia = n(), 
   )
-print(descriptivos_n_seg˙n_usoSNS) 
+print(descriptivos_n_seg√∫n_usoSNS) 
 
-# H3. La MS facilita en mayor medida la difusiÛn de contenido positivo, seguido del contenido negativo.
+# H3. La MS facilita en mayor medida la difusi√≥n de contenido positivo, seguido del contenido negativo.
 em <- emmeans(anova_imagenes_VDcomoContinua, ~ Grupo | ValAfect)
 comparison_val3 <- contrast(em, method = "pairwise", by = "ValAfect")
 print(comparison_val3) # Rechazo H3
 
+# Se obtiene a continuaci√≥n la difusi√≥n promedio para cada agrupaci√≥n de im√°genes
+tabla2 %>%
+  filter(Grupo %in% c(1, 2)) %>%  # Filtra solo las filas donde Grupo es 1 o 2
+  group_by(Grupo) %>%  # Agrupa por Grupo
+  summarise(
+    Media = mean(Difusi√≥ntotalImagenesNegativas, na.rm = TRUE),
+    Desviacion_Tipica = sd(Difusi√≥ntotalImagenesNegativas, na.rm = TRUE)
+  )
+tabla2 %>%
+  filter(Grupo %in% c(1, 2)) %>%  # Filtra solo las filas donde Grupo es 1 o 2
+  group_by(Grupo) %>%  # Agrupa por Grupo
+  summarise(
+    Media = mean(Difusi√≥ntotalImagenesNeutrales, na.rm = TRUE),
+    Desviacion_Tipica = sd(Difusi√≥ntotalImagenesNeutrales, na.rm = TRUE)
+  )
+tabla2 %>%
+  filter(Grupo %in% c(1, 2)) %>%  # Filtra solo las filas donde Grupo es 1 o 2
+  group_by(Grupo) %>%  # Agrupa por Grupo
+  summarise(
+    Media = mean(Difusi√≥ntotalImagenesPositivas, na.rm = TRUE),
+    Desviacion_Tipica = sd(Difusi√≥ntotalImagenesPositivas, na.rm = TRUE)
+  )
 
-# Mismos an·lisis pero ahora
-# La VD se considera discontinua: difusiÛn privada vs p˙blica
+#Se hace una regresi√≥n lineal m√∫ltiple de la DIfusi√≥n con todas las variables hasta ahora recogidas
+# no es necesario pero    tabla_larga_imagenes$ValAfect <- factor(tabla_larga_imagenes$ValAfect, levels = c("Negativa", "Neutral", "Positiva"), labels = c(0, 1, 2))
+modelo_rlm <- lm(Difusion ~ UsoSNSs + Horario + Grupo + ValAfect + Edad, data = tabla_larga_imagenes)
+# Resumen del modelo
+summary(modelo_rlm)
 
-# Se crean nuevas columnas con el recuento de im·genes difundidas seg˙n cada vÌa de difusiÛn
+
+# Creamos tabla larga con una fila por imagen x sujeto 
+tabla_larga_imagenes <- tabla2 %>%
+  pivot_longer(
+    cols = all_of(columnas_imagenes),  # Selecciona las columnas con las im√°genes
+    names_to = "Imagen",  # Los nombres de las columnas (las im√°genes) se almacenan en la columna "Imagen"
+    values_to = "Difusion"  # Los valores de difusi√≥n se guardan en la columna "Difusion"
+  ) %>%
+  mutate(
+    # Extraemos el tipo de valencia afectiva a partir del nombre de la imagen
+    ValAfect = case_when(
+      str_detect(Imagen, paste(columnas_imagen_negativa, collapse = "|")) ~ "Negativa",
+      str_detect(Imagen, paste(columnas_imagen_neutral, collapse = "|")) ~ "Neutral",
+      str_detect(Imagen, paste(columnas_imagen_positiva, collapse = "|")) ~ "Positiva",
+      TRUE ~ NA_character_
+    )
+  )
+
+# A√±adimos las 3 columnas con valores baremados de cada imagen en valencia, arousal y dominio.
+tabla_larga_imagenes <- tabla_larga_imagenes %>%
+  mutate(
+    Imagen_num = str_extract(Imagen, "\\d{4}")  # Extraemos el n√∫mero de 4 d√≠gitos de la columna Imagen
+  )
+
+tabla_larga_imagenes_con_info <- tabla_larga_imagenes %>%
+  left_join(
+    tabla_IAPS %>% 
+      select(IAPSn, valM, aroM, dom1m) %>% # Seleccionamos las columnas a extraer
+      mutate(IAPSn = as.character(IAPSn)),  # Convertimos IAPSn a car√°cter
+    by = c("Imagen_num" = "IAPSn")  # Establecemos las uni√≥n de las filas a trav√©s de la columnas en com√∫n entre ambas tablas
+  )
+
+
+#Se puede borrar????
+#A√±adir columna con difusi√≥n total general
+columnas_imagenes_IAPS <- c("1710", "1920", "2057", "2550", "5470", "5621", "5760", 
+                                   "5830", "7502", "8080", "2095", "2683", "2688", "6243", 
+                                   "7380", "9340", "9432", "9520", "9621", "9630", "2397", 
+                                   "2570", "2702", "2850", "2880", "5740", "5920", "7037", 
+                                   "7590", "8232") 
+
+# Discriminar las columnas de imagenes seg√∫n su Val.Afect.
+columnas_imagen_positiva_IAPS <- c("1710", "1920", "2057", "2550", "5470", "5621", "5760", "5830", "7502", "8080")
+columnas_imagen_negativa_IAPS <- c("2095","2683","2688","6243","7380","9340","9432", "9520", "9621", "9630")
+columnas_imagen_neutral_IAPS <-  c("2397", "2570", "2702", "2850", "2880", "5740", "5920", "7037", "7590", "8232")
+
+
+#A√±adir columna con difusi√≥n total general
+columnas_imagenes_IAPS <- c("1710", "1920", "2057", "2550", "5470", "5621", "5760", 
+                            "5830", "7502", "8080", "2095", "2683", "2688", "6243", 
+                            "7380", "9340", "9432", "9520", "9621", "9630", "2397", 
+                            "2570", "2702", "2850", "2880", "5740", "5920", "7037", 
+                            "7590", "8232") 
+tabla_larga <- tabla2 %>%
+  # Usar gather para convertir las columnas de im√°genes en filas
+  gather(key = "Imagen", value = "Difusion", -Subject, -Grupo, -Difusi√≥nTotal) %>%
+  # Extraer el n√∫mero de la imagen a partir del nombre de la columna
+  mutate(IAPSn = as.integer(gsub("Imagen", "", Imagen))) %>%
+  select(Subject, Grupo, Difusi√≥nTotal, IAPSn, Difusi√≥n)
+
+# 2. Unir con la tabla_IAPS para a√±adir las variables correspondientes:
+tabla_larga_imagenes <- tabla_larga %>%
+  left_join(tabla_IAPS, by = "IAPSn")
+# Esto anterior se borra????
+
+
+
+
+
+
+
+
+# Se calcula la M y DT de la media y desviaci√≥n t√≠pica baremados en valencia, arousal y dominio de las im√°genes IAPS
+#as√≠ como se hace la comparaci√≥n de media entre categor√≠as afectiva  pertinentes.
+
+# Calcular promedio y desviaci√≥n est√°ndar de aroM para cada nivel de CatAfect
+promedioVal_categoria_imagenes <- tabla_IAPS %>%
+  group_by(CatAfect) %>%
+  summarise(
+    promedio_ValM = mean(valM, na.rm = TRUE),
+    sd_ValM = sd(valM, na.rm = TRUE)
+  ) %>%
+  filter(CatAfect %in% c(1, 2, 3)) # Filtrar solo los niveles 1, 2 y 3
+# Mostrar resultados
+print(promedioVal_categoria_imagenes)
+
+# Calcular promedio y desviaci√≥n est√°ndar de aroM para cada nivel de CatAfect
+promedioValSD_categoria_imagenes <- tabla_IAPS %>%
+  group_by(CatAfect) %>%
+  summarise(
+    promedio_ValSD = mean(valSD, na.rm = TRUE),
+    sd_ValM = sd(valSD, na.rm = TRUE)
+  ) %>%
+  filter(CatAfect %in% c(1, 2, 3)) # Filtrar solo los niveles 1, 2 y 3
+# Mostrar resultados
+print(promedioValSD_categoria_imagenes)
+
+
+# Calcular promedio y desviaci√≥n est√°ndar de aroM para cada nivel de CatAfect
+promedioArousal_categoria_imagenes <- tabla_IAPS %>%
+  group_by(CatAfect) %>%
+  summarise(
+    promedio_aroM = mean(aroM, na.rm = TRUE),
+    sd_aroM = sd(aroM, na.rm = TRUE)
+  ) %>%
+  filter(CatAfect %in% c(1, 2, 3)) # Filtrar solo los niveles 1, 2 y 3
+# Mostrar resultados
+print(promedioArousal_categoria_imagenes)
+#Comparaci√≥n de medias
+# Filtrar solo los niveles 1, 2 y 3 de CatAfect
+datos_filtrados <- tabla_IAPS %>%
+  filter(CatAfect %in% c(1, 2, 3))
+# Realizar ANOVA
+anova_aroM <- aov(aroM ~ as.factor(CatAfect), data = datos_filtrados)
+# Mostrar resultados del ANOVA
+summary(anova_aroM)
+# Prueba de comparaciones m√∫ltiples de Tukey
+tukey_resultados <- TukeyHSD(anova_aroM)
+# Mostrar resultados
+print(tukey_resultados)
+
+# Calcular promedio y desviaci√≥n est√°ndar de aroSD para cada nivel de CatAfect
+promedioArousalSD_categoria_imagenes <- tabla_IAPS %>%
+  group_by(CatAfect) %>%
+  summarise(
+    promedio_aroSD = mean(aroSD, na.rm = TRUE),
+    sd_aroSD = sd(aroSD, na.rm = TRUE)
+  ) %>%
+  filter(CatAfect %in% c(1, 2, 3)) # Filtrar solo los niveles 1, 2 y 3
+# Mostrar resultados
+print(promedioArousalSD_categoria_imagenes)
+
+# Filtrar solo los niveles 1, 2 y 3 de CatAfect
+datos_filtrados <- tabla_IAPS %>%
+  filter(CatAfect %in% c(1, 2, 3))
+# Realizar ANOVA
+anova_aroSD <- aov(aroM ~ as.factor(CatAfect), data = datos_filtrados)
+# Mostrar resultados del ANOVA
+summary(anova_aroSD)
+# Prueba de comparaciones m√∫ltiples de Tukey
+tukey_resultados_aroSD <- TukeyHSD(anova_aroSD)
+# Mostrar resultados
+print(tukey_resultados_aroSD)
+
+
+# Calcular promedio y desviaci√≥n est√°ndar de domM para cada nivel de CatAfect
+promedioDominio_categoria_imagenes <- tabla_IAPS %>%
+  group_by(CatAfect) %>%
+  summarise(
+    promedio_domM = mean(dom1m, na.rm = TRUE),
+    sd_domM = sd(dom1m, na.rm = TRUE)
+  ) %>%
+  filter(CatAfect %in% c(1, 2, 3)) # Filtrar solo los niveles 1, 2 y 3
+# Mostrar resultados
+print(promedioDominio_categoria_imagenes)
+#Comparaci√≥n de medias
+# Filtrar solo los niveles 1, 2 y 3 de CatAfect
+datos_filtrados <- tabla_IAPS %>%
+  filter(CatAfect %in% c(1, 2, 3))
+# Realizar ANOVA
+anova_dominioM <- aov(dom1m ~ as.factor(CatAfect), data = datos_filtrados)
+# Mostrar resultados del ANOVA
+summary(anova_dominioM)
+# Prueba de comparaciones m√∫ltiples de Tukey
+tukey_resultados_dominio <- TukeyHSD(anova_dominioM)
+# Mostrar resultados
+print(tukey_resultados_dominio)
+
+# Calcular promedio y desviaci√≥n est√°ndar de domSD para cada nivel de CatAfect
+promedioDominioSD_categoria_imagenes <- tabla_IAPS %>%
+  group_by(CatAfect) %>%
+  summarise(
+    promedio_domSD = mean(dom1sd, na.rm = TRUE),
+    sd_domSD = sd(dom1sd, na.rm = TRUE)
+  ) %>%
+  filter(CatAfect %in% c(1, 2, 3)) # Filtrar solo los niveles 1, 2 y 3
+# Mostrar resultados
+print(promedioDominioSD_categoria_imagenes)
+
+
+#En las siguientes 40 l√≠neas se calcula la difusi√≥n total y por grupo de cada imagen y se a√±ade el resultado a tabla_IAPS
+# Calcular difusi√≥n total y por grupo
+difusion <- tabla2 %>%
+  summarise(
+    across(all_of(columnas_imagenes_IAPS), mean, na.rm = TRUE), .groups = "drop"
+  ) %>%
+  pivot_longer(cols = everything(), names_to = "Imagen", values_to = "DifTotal")
+
+difusion_control <- tabla2 %>%
+  filter(Grupo == 1) %>%
+  summarise(
+    across(all_of(columnas_imagenes_IAPS), mean, na.rm = TRUE), .groups = "drop"
+  ) %>%
+  pivot_longer(cols = everything(), names_to = "Imagen", values_to = "Dif_grupoControl")
+
+difusion_MS <- tabla2 %>%
+  filter(Grupo == 2) %>%
+  summarise(
+    across(all_of(columnas_imagenes_IAPS), mean, na.rm = TRUE), .groups = "drop"
+  ) %>%
+  pivot_longer(cols = everything(), names_to = "Imagen", values_to = "Dif_grupoMS")
+# Unir las tres tablas en una sola
+difusion_final <- difusion %>%
+  left_join(difusion_control, by = "Imagen") %>%
+  left_join(difusion_MS, by = "Imagen")
+# Modificar la columna Imagen en difusion_final
+difusion_final <- difusion_final %>%
+  mutate(Imagen = str_remove_all(Imagen, "^@|\\.jpg$"))  # Elimina "@" al inicio y ".jpg" al final
+difusion_final <- difusion_final %>%
+  mutate(Imagen = as.double(Imagen))
+# A√±adir los valores a tabla_IAPS
+tabla_IAPS <- tabla_IAPS %>%
+  left_join(difusion_final, by = c("IAPSn" = "Imagen"))
+# Ver la tabla actualizada
+print(tabla_IAPS)
+
+
+#Correlaciones aro, val, y dom con dif
+variables_correlaci√≥n_dimensionesIAPS <- tabla_IAPS %>%
+  select(valM, valSD, aroM, aroSD, dom1m, dom1sd, 
+         DifTotal.y, Dif_grupoControl.y, Dif_grupoMS.y)
+cor_spearman_dimensionesIAPS <- rcorr(as.matrix(variables_correlaci√≥n_dimensionesIAPS, type = "spearman"))
+# Aplicar la funci√≥n a la matriz actual
+p_values_with_asterisks <- apply(cor_spearman_dimensionesIAPS$P, c(1, 2), asterisks)
+# Combinar los r-valores con los asteriscos de la significatividad correspondiente
+cor_with_asterisks_dimensionesIAPS <- matrix(
+  paste0(round(cor_spearman_dimensionesIAPS$r, 3), " ", p_values_with_asterisks),
+  nrow = nrow(cor_spearman_dimensionesIAPS$r),
+  ncol = ncol(cor_spearman_dimensionesIAPS$r),
+  dimnames = dimnames(cor_spearman_dimensionesIAPS$r)
+)
+# Mostrar la matriz combinada
+print(cor_with_asterisks_dimensionesIAPS)
+print(cor_spearman_dimensionesIAPS$r)
+
+
+# Mismos an√°lisis pero ahora
+# La VD se considera discontinua: difusi√≥n privada vs p√∫blica
+
+# Se crean nuevas columnas con el recuento de im√°genes difundidas seg√∫n cada v√≠a de difusi√≥n
 tabla2 <- tabla2 %>%
   rowwise() %>%
   mutate(
-    DifusiÛnTotalVÌaNinguna = sum(c_across(all_of(columnas_imagenes)) == 0, na.rm = TRUE),
-    DifusiÛnTotalVÌaPrivada = sum(c_across(all_of(columnas_imagenes)) == 1, na.rm = TRUE),
-    DifusiÛnTotalVÌaPublica = sum(c_across(all_of(columnas_imagenes)) == 2, na.rm = TRUE)
+    Difusi√≥nTotalV√≠aNinguna = sum(c_across(all_of(columnas_imagenes)) == 0, na.rm = TRUE),
+    Difusi√≥nTotalV√≠aPrivada = sum(c_across(all_of(columnas_imagenes)) == 1, na.rm = TRUE),
+    Difusi√≥nTotalV√≠aPublica = sum(c_across(all_of(columnas_imagenes)) == 2, na.rm = TRUE)
   ) %>%
   ungroup()
 
-# Nuevas columnas con el registro de respuesta seg˙n Val.Afect. y vÌa de difusiÛn
+# Nuevas columnas con el registro de respuesta seg√∫n Val.Afect. y v√≠a de difusi√≥n
 tabla2 <- tabla2 %>%
   rowwise() %>%
   mutate(
-    DifusiÛnImagenesNegativasVÌaNinguna = sum(c_across(all_of(columnas_imagen_negativa)) == 0, na.rm = TRUE),
-    DifusiÛnImagenesNegativasVÌaPrivada = sum(c_across(all_of(columnas_imagen_negativa)) == 1, na.rm = TRUE),
-    DifusiÛnImagenesNegativasVÌaPublica = sum(c_across(all_of(columnas_imagen_negativa)) == 2, na.rm = TRUE),
-    DifusiÛnImagenesNeutralesVÌaNinguna = sum(c_across(all_of(columnas_imagen_neutral)) == 0, na.rm = TRUE),
-    DifusiÛnImagenesNeutralesVÌaPrivada = sum(c_across(all_of(columnas_imagen_neutral)) == 1, na.rm = TRUE),
-    DifusiÛnImagenesNeutralesVÌaPublica = sum(c_across(all_of(columnas_imagen_neutral)) == 2, na.rm = TRUE),
-    DifusiÛnImagenesPositivasVÌaNinguna = sum(c_across(all_of(columnas_imagen_positiva)) == 0, na.rm = TRUE),
-    DifusiÛnImagenesPositivasVÌaPrivada = sum(c_across(all_of(columnas_imagen_positiva)) == 1, na.rm = TRUE),
-    DifusiÛnImagenesPositivasVÌaPublica = sum(c_across(all_of(columnas_imagen_positiva)) == 2, na.rm = TRUE),
+    Difusi√≥nImagenesNegativasV√≠aNinguna = sum(c_across(all_of(columnas_imagen_negativa)) == 0, na.rm = TRUE),
+    Difusi√≥nImagenesNegativasV√≠aPrivada = sum(c_across(all_of(columnas_imagen_negativa)) == 1, na.rm = TRUE),
+    Difusi√≥nImagenesNegativasV√≠aPublica = sum(c_across(all_of(columnas_imagen_negativa)) == 2, na.rm = TRUE),
+    Difusi√≥nImagenesNeutralesV√≠aNinguna = sum(c_across(all_of(columnas_imagen_neutral)) == 0, na.rm = TRUE),
+    Difusi√≥nImagenesNeutralesV√≠aPrivada = sum(c_across(all_of(columnas_imagen_neutral)) == 1, na.rm = TRUE),
+    Difusi√≥nImagenesNeutralesV√≠aPublica = sum(c_across(all_of(columnas_imagen_neutral)) == 2, na.rm = TRUE),
+    Difusi√≥nImagenesPositivasV√≠aNinguna = sum(c_across(all_of(columnas_imagen_positiva)) == 0, na.rm = TRUE),
+    Difusi√≥nImagenesPositivasV√≠aPrivada = sum(c_across(all_of(columnas_imagen_positiva)) == 1, na.rm = TRUE),
+    Difusi√≥nImagenesPositivasV√≠aPublica = sum(c_across(all_of(columnas_imagen_positiva)) == 2, na.rm = TRUE),
   ) %>%
   ungroup()
 
-#TransformaciÛn Matriz en Formato Largo para VD seg˙n Val.Afectiva y VÌadeDifusiÛn
+
+# Calcular media, SD y frecuencia de la VD a cada nivel de interacci√≥n
+tabla2 %>%
+  summarise(across(44:52, list(Media = ~mean(.x, na.rm = TRUE), 
+                               SD = ~sd(.x, na.rm = TRUE)))) %>%
+  pivot_longer(everything(), names_to = c("Variable", "Estad√≠stico"), names_sep = "_", values_to = "Valor")
+
+sumatorios <- tabla2 %>%
+  summarise(across(44:52, sum, na.rm = TRUE))  # Suma cada columna, ignorando NAs
+
+# Mostrar todo el resultado sin truncamiento
+print(sumatorios, n = Inf)
+
+
+
+#Transformaci√≥n Matriz en Formato Largo para VD seg√∫n Val.Afectiva y V√≠adeDifusi√≥n
 
 tabla2_larga_VDcomoDiscontinua <- tabla2%>%
   pivot_longer(
-    cols = c(DifusiÛnImagenesNegativasVÌaNinguna, DifusiÛnImagenesNegativasVÌaPrivada, DifusiÛnImagenesNegativasVÌaPublica, 
-             DifusiÛnImagenesNeutralesVÌaNinguna, DifusiÛnImagenesNeutralesVÌaPrivada, DifusiÛnImagenesNeutralesVÌaPublica, 
-             DifusiÛnImagenesPositivasVÌaNinguna, DifusiÛnImagenesPositivasVÌaPrivada, DifusiÛnImagenesPositivasVÌaPublica),
+    cols = c(Difusi√≥nImagenesNegativasV√≠aNinguna, Difusi√≥nImagenesNegativasV√≠aPrivada, Difusi√≥nImagenesNegativasV√≠aPublica, 
+             Difusi√≥nImagenesNeutralesV√≠aNinguna, Difusi√≥nImagenesNeutralesV√≠aPrivada, Difusi√≥nImagenesNeutralesV√≠aPublica, 
+             Difusi√≥nImagenesPositivasV√≠aNinguna, Difusi√≥nImagenesPositivasV√≠aPrivada, Difusi√≥nImagenesPositivasV√≠aPublica),
     names_to = "Condicion",
-    values_to = "DifusiÛnSeg˙nValenciaAfectivaYVÌaDifusiÛn"
+    values_to = "Difusi√≥nSeg√∫nValenciaAfectivaYV√≠aDifusi√≥n"
   ) %>%
   mutate(
     ValAfect = case_when(
@@ -459,33 +767,49 @@ tabla2_larga_VDcomoDiscontinua <- tabla2%>%
       str_detect(Condicion, "ImagenesPositivas") ~ "ImagenesPositivas",
     ),
       ViaDif = case_when(
-        str_detect(Condicion, "VÌaNinguna") ~ "DifundidasVÌaNinguna",
-        str_detect(Condicion, "VÌaPrivada") ~ "DifundidasVÌaPrivada",
-        str_detect(Condicion, "VÌaPublica") ~ "DifundidasVÌaPublica"
+        str_detect(Condicion, "V√≠aNinguna") ~ "DifundidasV√≠aNinguna",
+        str_detect(Condicion, "V√≠aPrivada") ~ "DifundidasV√≠aPrivada",
+        str_detect(Condicion, "V√≠aPublica") ~ "DifundidasV√≠aPublica"
     )
   )
 
-# Frecuencia de respuesta de difusiÛn seg˙n VÌa de difusiÛn
-descriptivos_Im·genesVDcomoDiscontinua <- tabla2_larga_VDcomoDiscontinua %>%
+# Frecuencia de respuesta de difusi√≥n seg√∫n V√≠a de difusi√≥n
+descriptivos_Im√°genesVDcomoDiscontinua <- tabla2_larga_VDcomoDiscontinua %>%
   group_by(ViaDif, ValAfect) %>% 
   summarise(Frecuencia = n(),   
-      Media = mean(DifusiÛnSeg˙nValenciaAfectivaYVÌaDifusiÛn, na.rm = TRUE), 
-      DesviaciÛn_TÌpica = sd(DifusiÛnSeg˙nValenciaAfectivaYVÌaDifusiÛn, na.rm = TRUE)
+      Media = mean(Difusi√≥nSeg√∫nValenciaAfectivaYV√≠aDifusi√≥n, na.rm = TRUE), 
+      Desviaci√≥n_T√≠pica = sd(Difusi√≥nSeg√∫nValenciaAfectivaYV√≠aDifusi√≥n, na.rm = TRUE)
             )
 # Mostrar el resultado
-print(descriptivos_Im·genesVDcomoDiscontinua)
+print(descriptivos_Im√°genesVDcomoDiscontinua)
 
-# ANOVA 2 (grupo) x 3 (valencia afectiva) x 3(vÌa de difusiÛn) considerando la no esfericidad (correcciÛn Greenhouse-Geisser)
+
+# Se calcula la regresi√≥n logar√≠tmica multinomial
+tabla_larga_imagenes_con_info$Difusion <- as.factor(tabla_larga_imagenes_con_info$Difusion)
+reg_log_nom <- multinom(Difusion ~ Grupo * ValAfect, data = tabla_larga_imagenes_con_info)
+summary(reg_log_nom)
+
+#Se mira la fiabilidad o buen ajuste del modelo
+reg_log_nom$deviance  # Desviaci√≥n residual
+reg_log_nom$null.deviance  # Desviaci√≥n nula
+
+#calcular el pseudo-R¬≤ de McFadden, que mide la proporci√≥n de mejora
+pR2(reg_log_nom) # valores > 0.2 indican buen ajuste
+
+
+
+#No es correcto hacer ANOVA para una VD categ√≥rica
+# ANOVA 2 (grupo) x 3 (valencia afectiva) x 3(v√≠a de difusi√≥n) considerando la no esfericidad (correcci√≥n Greenhouse-Geisser)
 anova_imagenes_VDcomoDiscontinua <- aov_car(
-  DifusiÛnSeg˙nValenciaAfectivaYVÌaDifusiÛn ~ Grupo * ValAfect * ViaDif + Error(Subject / (ValAfect * ViaDif)),
+  Difusi√≥nSeg√∫nValenciaAfectivaYV√≠aDifusi√≥n ~ Grupo * ValAfect * ViaDif + Error(Subject / (ValAfect * ViaDif)),
   data = tabla2_larga_VDcomoDiscontinua,
   anova_table = list(correction = "GG", es = "ges", full = TRUE) 
 )
-resultados_anova_imagenes_Discontinua_conCorrecciÛnGG<- anova_imagenes_VDcomoDiscontinua$anova_table
-print(resultados_anova_imagenes_Discontinua_conCorrecciÛnGG) 
+resultados_anova_imagenes_Discontinua_conCorrecci√≥nGG<- anova_imagenes_VDcomoDiscontinua$anova_table
+print(resultados_anova_imagenes_Discontinua_conCorrecci√≥nGG) 
 
-#Pruebas post hoc para los niveles mencionados en la hipÛtesis
-# H4. La MS aumenta la difusiÛn de contenido negativo en la red privada m·s que en la p˙blica.
+#Pruebas post hoc para los niveles mencionados en la hip√≥tesis
+# H4. La MS aumenta la difusi√≥n de contenido negativo en la red privada m√°s que en la p√∫blica.
 em <- emmeans(anova_imagenes_VDcomoDiscontinua, ~ Grupo | ValAfect * ViaDif)
 comparacion <- contrast(em, method = "pairwise", by = c("ValAfect", "ViaDif"), at = list(ValAfect = 1, ViaDif = 2))
 print(comparacion)  # Rechazo H4
@@ -494,47 +818,47 @@ print(comparacion)  # Rechazo H4
 tabla2_larga_VDcomoDiscontinua <- tabla2_larga_VDcomoDiscontinua %>%
   group_by(ValAfect) %>%
   mutate(
-    PercentilFrecuencia = ntile(DifusiÛnSeg˙nValenciaAfectivaYVÌaDifusiÛn, 4)  # Divide en 4 percentiles
+    PercentilFrecuencia = ntile(Difusi√≥nSeg√∫nValenciaAfectivaYV√≠aDifusi√≥n, 4)  # Divide en 4 percentiles
   )
 
 # Calcular media de frecuencia de respuesta
 tabla2_medias <- tabla2_larga_VDcomoDiscontinua %>%
   group_by(ViaDif, ValAfect) %>%
   summarise(
-    MediaDifusion = mean(DifusiÛnSeg˙nValenciaAfectivaYVÌaDifusiÛn, na.rm = TRUE),
+    MediaDifusion = mean(Difusi√≥nSeg√∫nValenciaAfectivaYV√≠aDifusi√≥n, na.rm = TRUE),
     PercentilFrecuencia = ntile(MediaDifusion, 4)  # Calcular percentiles de la media
   )
 
-#Gr·fico distribuciÛn de respuestas
+#Gr√°fico distribuci√≥n de respuestas
 ggplot(tabla2_medias, 
        aes(x = ViaDif, 
            y = MediaDifusion, 
            color = ValAfect, 
-           group = ValAfect)) +  # Agrupa por CategorÌa Afectiva
-  geom_point(alpha = 1) +       # AÒade puntos
-  geom_line(size = 1) +         # AÒade lÌneas que conectan los puntos
+           group = ValAfect)) +  # Agrupa por Categor√≠a Afectiva
+  geom_point(alpha = 1) +       # A√±ade puntos
+  geom_line(size = 1) +         # A√±ade l√≠neas que conectan los puntos
   labs(
-    title = "Media de DifusiÛn seg˙n CategorÌa Afectiva y Tipo de DifusiÛn",
-    x = "Tipo de DifusiÛn",
-    y = "Frecuencia de cada Respuesta de DifusiÛn",
-    color = "CategorÌa Afectiva"
+    title = "Media de Difusi√≥n seg√∫n Categor√≠a Afectiva y Tipo de Difusi√≥n",
+    x = "Tipo de Difusi√≥n",
+    y = "Frecuencia de cada Respuesta de Difusi√≥n",
+    color = "Categor√≠a Afectiva"
   ) +
   theme_minimal() +             # Tema limpio
   scale_x_discrete()            # Eje x discreto
 
 
-# ---------------- Tabla 3: cuestionario Stroop ---------------- #
+# ---------------- Tabla 3: cuestionario Autoestima Colectiva ---------------- #
 
-# Matriz de correlaciones Ìtems cuestionario
+# Matriz de correlaciones √≠tems cuestionario
 tabla_items_cuestionario <-tabla3 %>%
   select(6:19)
 
 # Calcular Alfa de Cronbach para el cuestionario
 alphaCuestionarioAutoestima <- psych::alpha(tabla_items_cuestionario)
 print(alphaCuestionarioAutoestima)  #El alfa de Cronbach del cuestionario da igual que en SPSS
-# Tan sÛlo se puede mejorar la fiabilidad en un 0.01 tras eliminar el Ìtem Ident1, por lo que opto por conservar la estructura original
+# Tan s√≥lo se puede mejorar la fiabilidad en un 0.01 tras eliminar el √≠tem Ident1, por lo que opto por conservar la estructura original
 
-# Se comprueba si los datos son adecuados para en an·lisis factorial
+# Se comprueba si los datos son adecuados para en an√°lisis factorial
 # Prueba de KMO
 kmo_result <- KMO(tabla_items_cuestionario)
 print(kmo_result)
@@ -543,7 +867,7 @@ print(kmo_result)
 bartlett_result <- cortest.bartlett(cor(tabla_items_cuestionario), n = nrow(tabla_items_cuestionario))
 print(bartlett_result)
 
-# An·lisis factorial confirmatorio de la estructura del cuestionario original: con m·xima verosimilitud y RotaciÛn Oblimin
+# An√°lisis factorial confirmatorio de la estructura del cuestionario original: con m√°xima verosimilitud y Rotaci√≥n Oblimin
 matriz_corr <- cor(scale(tabla_items_cuestionario))
 
 resultado_afc <- fa(
@@ -553,8 +877,8 @@ resultado_afc <- fa(
   fm = "ml"
 )
 
-# Comprobar ajuste del modelo y viabilidad de la reducciÛn factorial
-# Modelo CFA basado en tus factores e Ìtems
+# Comprobar ajuste del modelo y viabilidad de la reducci√≥n factorial
+# Modelo CFA basado en tus factores e √≠tems
 modelo <- '
 Factor1 =~ Priv1 + Priv2 + Priv3
 Factor2 =~ Public1 + Public2 + Public3 + Public4
@@ -564,14 +888,14 @@ Factor4 =~ Memb1 + Memb2 + Memb3
 
 # Ajustar el modelo CFA a los datos
 fit <- cfa(modelo, data = tabla_items_cuestionario)
-# Resumen con Ìndices de ajuste
-summary(fit, fit.measures = TRUE, standardized = TRUE) # valores de los Ìndices CFI, TLI, RMSEA, SRMR inadecuados
+# Resumen con √≠ndices de ajuste
+summary(fit, fit.measures = TRUE, standardized = TRUE) # valores de los √≠ndices CFI, TLI, RMSEA, SRMR inadecuados
 
-# Se eliminan los Ìtems problem·ticos (fueron errÛneamente transcritos) y se realiza un EFA con tantos factores como se estimen a partir de un autovalor > 1
+# Se eliminan los √≠tems problem√°ticos (fueron err√≥neamente transcritos) y se realiza un EFA con tantos factores como se estimen a partir de un autovalor > 1
 tabla_items_cuestionario <- tabla_items_cuestionario %>% select(-c(10, 12))
 matriz_corr <- cor(scale(tabla_items_cuestionario))
 
-# PCA inicial sin rotaciÛn para obtener los autovalores iniciales
+# PCA inicial sin rotaci√≥n para obtener los autovalores iniciales
 pca_sin_rotacion <- principal(matriz_corr, nfactors = ncol(tabla_items_cuestionario), rotate = "none")
 
 # Obtener los autovalores iniciales y varianza explicada
@@ -590,11 +914,11 @@ tabla_varianza <- data.frame(
 # Mostrar la tabla
 print(tabla_varianza)
 
-# PCA con rotaciÛn Oblimin (si es necesaria)
+# PCA con rotaci√≥n Oblimin (si es necesaria)
 pca_con_rotacion <- principal(matriz_corr, nfactors = 4, rotate = "oblimin")
 
-# Mostrar resultados tras la rotaciÛn
-cat("\nCargas factoriales tras la rotaciÛn Oblimin:\n")
+# Mostrar resultados tras la rotaci√≥n
+cat("\nCargas factoriales tras la rotaci√≥n Oblimin:\n")
 print(pca_con_rotacion$loadings, cutoff = 0.32)
 
 # Crear nuevas columnas con las puntuaciones factoriales y punt. total
@@ -604,25 +928,25 @@ tabla3 <- cbind(tabla3, puntuaciones_factoriales)
 
 tabla3$AutoestimaTotal <- rowSums(puntuaciones_factoriales) 
 
-#AÒadir columnas con VDs de tareas anteriores
+#A√±adir columnas con VDs de tareas anteriores
 tabla3 <- tabla3 %>%
   left_join(select(tabla2, Subject, PercentilUsoSNS), by = "Subject")
 tabla3 <- tabla3 %>%
-  left_join(select(tabla2, Subject, DifusiÛnTotal), by = "Subject")
+  left_join(select(tabla2, Subject, Difusi√≥nTotal), by = "Subject")
 tabla3 <- tabla3 %>%
-  left_join(select(tabla2, Subject, DifusiÛntotalImagenesNegativas), by = "Subject")
+  left_join(select(tabla2, Subject, Difusi√≥ntotalImagenesNegativas), by = "Subject")
 tabla3 <- tabla3 %>%
-  left_join(select(tabla2, Subject, DifusiÛntotalImagenesNeutrales), by = "Subject")
+  left_join(select(tabla2, Subject, Difusi√≥ntotalImagenesNeutrales), by = "Subject")
 tabla3 <- tabla3 %>%
-  left_join(select(tabla2, Subject, DifusiÛntotalImagenesPositivas), by = "Subject")
+  left_join(select(tabla2, Subject, Difusi√≥ntotalImagenesPositivas), by = "Subject")
 
 #Correlaciones con la Autoestima
-variables_correlaciÛn_tabla3 <- tabla3 %>%
-  select(Grupo, DifusiÛnTotal,  AutoestimaTotal, DifusiÛntotalImagenesNeutrales, DifusiÛntotalImagenesNegativas ,DifusiÛntotalImagenesPositivas, PercentilUsoSNS)
+variables_correlaci√≥n_tabla3 <- tabla3 %>%
+  select(Grupo, Difusi√≥nTotal,  AutoestimaTotal, Difusi√≥ntotalImagenesNeutrales, Difusi√≥ntotalImagenesNegativas ,Difusi√≥ntotalImagenesPositivas, PercentilUsoSNS)
 
-cor_spearman_tabla3 <- rcorr(as.matrix(variables_correlaciÛn_tabla3), type = "spearman")
+cor_spearman_tabla3 <- rcorr(as.matrix(variables_correlaci√≥n_tabla3), type = "spearman")
 
-# Aplicar la funciÛn a la matriz actual
+# Aplicar la funci√≥n a la matriz actual
 p_values_with_asterisks <- apply(cor_spearman_tabla3$P, c(1, 2), asterisks)
 
 # Combinar los r-valores con los asteriscos de la significatividad correspondiente
@@ -633,20 +957,20 @@ cor_with_asterisks_tabla3 <- matrix(
   dimnames = dimnames(cor_spearman_tabla3$r)
 )
 # Mostrar la matriz combinada
-print(cor_with_asterisks_tabla3) # No se observa correlaciÛn significativa de las VIs con la Autoestima
+print(cor_with_asterisks_tabla3) # No se observa correlaci√≥n significativa de las VIs con la Autoestima
 
 media_total <- mean(tabla3$AutoestimaTotal, na.rm = TRUE)
 sd_total <- sd(tabla3$AutoestimaTotal, na.rm = TRUE)
 
-# Estandarizar la puntuaciÛn total
+# Estandarizar la puntuaci√≥n total
 tabla3$AutoestimaTotal_estandarizada <- 
   (tabla3$AutoestimaTotal - media_total) / sd_total
 
-# Verificar que la puntuaciÛn estandarizada tiene media 0 y desviaciÛn tÌpica 1
+# Verificar que la puntuaci√≥n estandarizada tiene media 0 y desviaci√≥n t√≠pica 1
 media_estandarizada <- mean(tabla3$AutoestimaTotal_estandarizada, na.rm = TRUE)
 sd_estandarizada <- sd(tabla3$AutoestimaTotal_estandarizada, na.rm = TRUE)
 cat("Media de AutoestimaTotal estandarizada:", media_estandarizada, "\n")  
-cat("DesviaciÛn tÌpica de AutoestimaTotal estandarizada:", sd_estandarizada, "\n")
+cat("Desviaci√≥n t√≠pica de AutoestimaTotal estandarizada:", sd_estandarizada, "\n")
 
 # Mostrar descriptivos Autoestima por Grupo
 descriptivos_autoestima <- tabla3 %>%
@@ -658,25 +982,28 @@ descriptivos_autoestima <- tabla3 %>%
 # Mostrar la tabla resumen
 print(descriptivos_autoestima)
 
-# Realizar prueba t seg˙n Grupo Exp para cada factor del cuestionario, asÌ como para la AutoestimaTotal
+# Realizar prueba t seg√∫n Grupo Exp para cada factor del cuestionario, as√≠ como para la AutoestimaTotal
 resultados_t <- lapply(c("TC1", "TC2", "TC3", "TC4", "AutoestimaTotal"), function(col) {
  t_test_autoestima <- t.test(tabla3[[col]] ~ tabla3$Grupo, data= tabla3)
 })
 
-print(resultados_t) # Resulta casi significativo el cuarto factor: MembresÌa
+print(resultados_t) # Resulta casi significativo el cuarto factor: Membres√≠a
 
-# ANOVA Autoestima ~ 2 x 3 x 3  
-
-# Crear columna PercentilDifusiÛn
-tabla3 <- tabla3 %>%
+# Crear columna PercentilDifusi√≥n
+tabla2 <- tabla2 %>%
   mutate(
     PercentilDifusion = case_when(
-      DifusiÛnTotal <= quantile(DifusiÛnTotal, 0.33, na.rm = TRUE) ~ 1,
-      DifusiÛnTotal <= quantile(DifusiÛnTotal, 0.66, na.rm = TRUE) ~ 2,
+      Difusi√≥nTotal <= quantile(Difusi√≥nTotal, 0.33, na.rm = TRUE) ~ 1,
+      Difusi√≥nTotal <= quantile(Difusi√≥nTotal, 0.66, na.rm = TRUE) ~ 2,
       TRUE ~ 3
     )
   )
 
+# A√±adir columnas de percentiles a tabla3
+tabla3$PercentilDifusion <- tabla2$PercentilDifusion
+tabla3$PercentilUsoSNS <- tabla2$PercentilUsoSNS
+
+# ANOVA Autoestima ~ 2 x 3 x 3  
 anova_Autoestima <- aov_car(
   AutoestimaTotal ~ Grupo * PercentilUsoSNS  * PercentilDifusion  + Error(Subject),
   data = tabla3,
@@ -685,23 +1012,23 @@ anova_Autoestima <- aov_car(
 resultados_anova_autoestima<- anova_Autoestima$anova_table
 print(resultados_anova_autoestima) 
 
-# Significativa la diferencia de la autoestima entre grupos en un grado de difusiÛn bajo
+# Significativa la diferencia de la autoestima entre grupos en un grado de difusi√≥n bajo
 em <- emmeans(anova_Autoestima, ~ Grupo | PercentilDifusion)
 comparacion <- contrast(em, method = "pairwise", by = c("PercentilDifusion"), adjust = "bonferroni")
 print(comparacion) 
 
 
-#--- RegresiÛn lineal m˙ltiple de la Autoestima con mediaciÛn de la DifusiÛn y moderaciÛn del Grupo --#
+#--- Regresi√≥n lineal m√∫ltiple de la Autoestima con mediaci√≥n de la Difusi√≥n y moderaci√≥n del Grupo --#
 
-tabla3$Difusion_Grupo <- tabla3$Grupo * tabla3$DifusiÛnTotal
-tabla3$Difusion <- tabla3$DifusiÛnTotal # El modelo de RLM no acepta tildes
+tabla3$Difusion_Grupo <- tabla3$Grupo * tabla3$Difusi√≥nTotal
+tabla3$Difusion <- tabla3$Difusi√≥nTotal # El modelo de RLM no acepta tildes
 
-# Definir el modelo de mediaciÛn moderada
+# Definir el modelo de mediaci√≥n moderada
 modelo_74 <- '
-  # EcuaciÛn para la mediadora
+  # Ecuaci√≥n para la mediadora
   Difusion ~ a * Grupo
 
-  # EcuaciÛn para la VD
+  # Ecuaci√≥n para la VD
   AutoestimaTotal ~ b * Grupo + c * Difusion + d * Difusion_Grupo
 
   # Efecto indirecto
@@ -715,22 +1042,31 @@ fit_74 <- sem(modelo_74, data = tabla3)
 summary(fit_74, standardized = TRUE, rsquare = TRUE)
 
 fitMeasures(fit_74, c("cfi", "tli", "rmsea", "srmr")) 
-# Estos Ìndices seÒalan el ajuste inadecuado de los datos para la RLM
+# Estos √≠ndices se√±alan el ajuste inadecuado de los datos para la RLM
 
 
-#----- RepeticiÛn de los an·lisis principales pero controlando la influencia de la variable Horario -----#
+#----- Repetici√≥n de los an√°lisis principales pero controlando la influencia de la variable Horario -----#
 
-#ANOVA Tarea Stroop PrecisiÛn
+# An√°lisis correlacional tiempo de uso diario de SNS y difusi√≥n
+vars_cor <- tabla2[, c("UsoSNSs", "Difusi√≥nTotal", "Difusi√≥ntotalImagenesNegativas", 
+                      "Difusi√≥ntotalImagenesNeutrales", "Difusi√≥ntotalImagenesPositivas")]
+# Calcular la matriz de correlaci√≥n de Pearson
+cor_matrix <- cor(vars_cor, use = "pairwise.complete.obs", method = "spearman")
+print(cor_test$r)# Mostrar la matriz de correlaci√≥n
+print(cor_test$P)
+
+
+#ANOVA Tarea Stroop Precisi√≥n
 control_anova_stroopAE <- aov_car(
-  PrecisiÛn ~ Grupo * Horario * Color * TipoPalabra + Error(Subject / (Color * TipoPalabra)),
-  data = tabla1_larga_PrecisiÛn
+  Precisi√≥n ~ Grupo * Horario * Color * TipoPalabra + Error(Subject / (Color * TipoPalabra)),
+  data = tabla1_larga_Precisi√≥n
 )
 # Mostrar los resultados
 summary(control_anova_stroopAE) 
 
 em <- emmeans(control_anova_stroopAE, ~ Grupo | Horario)
 comparacion <- contrast(em, method = "pairwise", by = c("Horario"),)
-print(comparacion) # Entre los participantes de la maÒana el Grupo 2 mostrÛ mayor precisiÛn
+print(comparacion) # Entre los participantes de la ma√±ana el Grupo 2 mostr√≥ mayor precisi√≥n
 
 # ANOVA tarea Stroop para el Tiempo de Respuesta
 control_anova_stroopTR <- aov_car(
@@ -739,16 +1075,16 @@ control_anova_stroopTR <- aov_car(
 )
 # Mostrar los resultados
 summary(control_anova_stroopTR) 
-# Nada nuevo o interesante, los posthoc interesarÌan si fuera significativo Grupo:Horario:TipoPalabra
+# Nada nuevo o interesante, los posthoc interesar√≠an si fuera significativo Grupo:Horario:TipoPalabra
 
-#ANOVA tarea DifusiÛn im·genes
+#ANOVA tarea Difusi√≥n im√°genes
 control_anova_imagenes_VDcomoContinua <- aov_car(
-  DifusiÛnSeg˙nValenciaAfectivaVDcomoContinua ~ Grupo * Horario  * PercentilUsoSNS * ValAfect + Error(Subject / ValAfect),
+  Difusi√≥nSeg√∫nValenciaAfectivaVDcomoContinua ~ Grupo * Horario  * PercentilUsoSNS * ValAfect + Error(Subject / ValAfect),
   data = tabla2_larga_VDcomoContinua,
   anova_table = list(correction = "GG", es = "ges", full = TRUE) 
 )
-control_resultados_anova_imagenes_VDcomoContinua_conCorrecciÛnGG<- control_anova_imagenes_VDcomoContinua$anova_table
-print(control_resultados_anova_imagenes_VDcomoContinua_conCorrecciÛnGG) # Nada interesante
+control_resultados_anova_imagenes_VDcomoContinua_conCorrecci√≥nGG<- control_anova_imagenes_VDcomoContinua$anova_table
+print(control_resultados_anova_imagenes_VDcomoContinua_conCorrecci√≥nGG) # Nada interesante
 
 # ANOVA cuestionario Autoestima
 control_anova_Autoestima <- aov_car(
@@ -759,11 +1095,11 @@ control_anova_Autoestima <- aov_car(
 control_resultados_anova_autoestima<- control_anova_Autoestima$anova_table
 print(control_resultados_anova_autoestima)
 
-# Post hoc Autoestima seg˙n Grupo
+# Post hoc Autoestima seg√∫n Grupo
 em <- emmeans(control_anova_Autoestima, ~ Grupo)
 comparacion <- contrast(em, method = "pairwise",)
 print(comparacion) 
-# Post hoc Autoestima seg˙n Grupo:Horario
+# Post hoc Autoestima seg√∫n Grupo:Horario
 em <- emmeans(control_anova_Autoestima, ~ Grupo | Horario)
 comparacion <- contrast(em, method = "pairwise", by = c("Horario"),)
 print(comparacion) 
